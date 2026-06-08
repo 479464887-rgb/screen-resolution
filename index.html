@@ -10,7 +10,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠</text></svg>">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠</text></svg>">
+<meta name="theme-color" content="#0d1117">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Check your screen resolution, viewport size, pixel ratio, and color depth instantly.">
     <meta name="keywords" content="screen resolution, viewport size, pixel ratio, display info, screen test">
     <meta property="og:title" content="Screen Resolution — DevKit Tools">
@@ -190,7 +192,7 @@
 <div id="res-info"></div>
 
             <script>
-
+'use strict';
 const info = document.getElementById('res-info');
 
 function detect() {
@@ -222,8 +224,7 @@ function detect() {
 detect();
 window.addEventListener('resize', detect);
 window.matchMedia('(orientation: portrait)').addEventListener('change', detect);
-
-            </script>
+</script>
             </div>
         </div>
     </div>
@@ -233,13 +234,14 @@ window.matchMedia('(orientation: portrait)').addEventListener('change', detect);
         © 2026 DevKit Tools
     </div>
     <script>
-    function copyText(text, btn) {
+'use strict';
+function copyText(text, btn) {
         navigator.clipboard.writeText(text).then(() => {
             var orig = btn.textContent;
             btn.textContent = 'Copied!';
             setTimeout(() => btn.textContent = orig, 1500);
         });
     }
-    </script>
+</script>
 </body>
 </html>
